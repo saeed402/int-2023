@@ -22,7 +22,8 @@ pwd
 
 ````
 
-![Pwd command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\Pwd command.PNG)
+![Pwd command](https://github.com/saeed402/int-2023/assets/139351697/7717f4b0-8c13-4af8-bfda-a20fb9692de8)
+
 
 **3. mkdir Command**
 
@@ -32,7 +33,8 @@ pwd
 mkdir <directory name> 
 ````
 
-![mkdir command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\mkdir command.PNG)
+![mkdir command](https://github.com/saeed402/int-2023/assets/139351697/7a05e652-008a-4fd0-8098-e16d97d64f99)
+
 
 **4. rmdir command**
 
@@ -42,11 +44,13 @@ mkdir <directory name>
 rmdir <directory name>
 ````
 
-![rmdir 1](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\rmdir 1.PNG)
+![rmdir 1](https://github.com/saeed402/int-2023/assets/139351697/fa37e968-74f7-4a1b-ad7c-0e2f939f9ec9)
+
 
 *The rmdir command **removes the directory, specified by the Directory parameter, from the system**. The directory must be empty before you can remove it, and you must have write permission in its parent directory.*
 
-![rmdir 2](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\rmdir 2.PNG)
+![rmdir 2](https://github.com/saeed402/int-2023/assets/139351697/da1865fc-084e-41ea-9fe1-5a8447656e0b)
+
 
 **5. cd command**
 
@@ -56,7 +60,8 @@ rmdir <directory name>
 cd <directory name>  
 ````
 
-![cd command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cd command.PNG)
+![cd command](https://github.com/saeed402/int-2023/assets/139351697/10139686-b036-486f-a728-68a201d4412e)
+
 
 **6. touch command**
 
@@ -67,7 +72,8 @@ touch <file name>
 touch <file1>  <file2> ....  
 ````
 
-![touch ls -al command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\touch ls -al command.PNG)
+![touch ls -al command](https://github.com/saeed402/int-2023/assets/139351697/28a5c8df-e9bc-4c60-acea-41c666ebc2b8)
+
 
 **7. cat command**
 
@@ -83,8 +89,8 @@ To create a file, execute it as follows:
 cat > <file name>  
 // Enter file content  
 ````
+![cat command](https://github.com/saeed402/int-2023/assets/139351697/a2e70227-0f51-4fd8-9a8a-479115123b10)
 
-![cat command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cat command.PNG)
 
 **8. rm command**
 
@@ -94,7 +100,8 @@ cat > <file name>
 rm <file name>
 ````
 
-![rmdir 2](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\rmdir 2.PNG)
+![rmdir 2](https://github.com/saeed402/int-2023/assets/139351697/b093973d-89b6-4fb5-bf32-e083e13a02ae)
+
 
 **9. cp command**
 
@@ -104,9 +111,9 @@ rm <file name>
 cp <existing file name> <new file name> 
 ````
 
-![cp 1](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cp 1.PNG)
+![cp 1](https://github.com/saeed402/int-2023/assets/139351697/09975d90-fb2c-43ac-beeb-5dea02cdb363)
+![cp 2](https://github.com/saeed402/int-2023/assets/139351697/93ce8503-435f-4e3a-957e-9b870d7e2acf)
 
-![cp 2](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cp 2.PNG)
 
 **10. mv command**
 
@@ -116,7 +123,8 @@ cp <existing file name> <new file name>
 mv <file name> <directory path> 
 ````
 
-![mv](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\mv.PNG)
+![mv](https://github.com/saeed402/int-2023/assets/139351697/a8878f98-4a69-41f7-a70a-ef04cc21ba0f)
+
 
 **11. head command**
 
@@ -126,7 +134,8 @@ mv <file name> <directory path>
 head <file name>  
 ````
 
-![head command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\head command.PNG)
+![head command](https://github.com/saeed402/int-2023/assets/139351697/392c0ce4-df5a-4de1-8487-da9a36dae817)
+
 
 **12. tail command**
 
@@ -141,7 +150,8 @@ tail <file name>
 
 ````
 
-![tail command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\tail command.PNG)
+![tail command](https://github.com/saeed402/int-2023/assets/139351697/07ed1f55-77cc-4ca5-91d4-f768414cccd8)
+
 
 **13. tac command**
 
@@ -153,7 +163,8 @@ tail <file name>
 tac <file name>  
 ````
 
-![tac command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\tac command.PNG)
+![tac command](https://github.com/saeed402/int-2023/assets/139351697/b3546bed-5c9c-41d6-9dce-5681223d01dd)
+
 
 **13. su command**
 
@@ -165,7 +176,8 @@ tac <file name>
 su <user name>  
 ````
 
-![su 1](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\su 1.PNG)
+![su 1](https://github.com/saeed402/int-2023/assets/139351697/d1f8b6f2-bc13-47ae-91de-beff0d937e39)
+
 
 **14. cat command**
 
@@ -175,7 +187,8 @@ su <user name>
 cat <fileName> | cat or tac | cat or tac |. . . 
 ````
 
-![cat filter](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cat filter.PNG)
+![cat filter](https://github.com/saeed402/int-2023/assets/139351697/3d247837-f3ff-4af6-9dd4-d44065a2f563)
+
 
 **15. tr command**
 
@@ -258,8 +271,8 @@ gunzip <file1> <file2> <file3>. .
 ````syntax
 find . -name "*.pdf"  
 ````
+![find command](https://github.com/saeed402/int-2023/assets/139351697/27ad21a4-49a0-40c3-8915-32ac2567f1bd)
 
-![find command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\find command.PNG)
 
 **23. locate command **
 
@@ -275,7 +288,8 @@ find . -name "*.pdf"
 locate <file name>  
 `````
 
-![locate command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\locate command.PNG)
+![locate command](https://github.com/saeed402/int-2023/assets/139351697/b149bc12-1d5b-4fbf-ae59-596040ba9da2)
+
 
 **24. date command**
 
@@ -285,7 +299,8 @@ locate <file name>
 date 
 ````
 
-![Date command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\Date command.PNG)
+![Date command](https://github.com/saeed402/int-2023/assets/139351697/37f3ce1e-43d5-4aae-b1b1-d6ff807b3440)
+
 
 **25. cal command**
 
@@ -295,7 +310,8 @@ date
 cal<
 ````
 
-![cal command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cal command.PNG)
+![cal command](https://github.com/saeed402/int-2023/assets/139351697/c8cd6654-f58d-4308-9f03-aa6a9f265feb)
+
 
 **26. sleep command**
 
@@ -322,8 +338,8 @@ zcat <file name>
 ````syntax
 df
 ````
+![df command](https://github.com/saeed402/int-2023/assets/139351697/600e2159-a784-4ebd-8db8-f3fe0c43afe5)
 
-![df command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\df command.PNG)
 
 **29. mount command**
 
@@ -351,7 +367,8 @@ exit
 clear 
 ````
 
-![clear command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\clear command.PNG)
+![clear command](https://github.com/saeed402/int-2023/assets/139351697/3651ac66-229f-4a2c-b428-9b226899527c)
+
 
 **32. ip command**
 
@@ -363,7 +380,8 @@ clear
 ip a or ip addr  
 ````
 
-![ip command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\ip command.PNG)
+![ip command](https://github.com/saeed402/int-2023/assets/139351697/b54ef421-a1bc-4fa1-b6a4-b057c612983e)
+
 
 **33. mail commmand **
 
@@ -383,7 +401,8 @@ mail -s "Subject" <recipient address>
 ping <destination>  
 ````
 
-![image-20230725221357550](C:\Users\MY HP\AppData\Roaming\Typora\typora-user-images\image-20230725221357550.png)
+![ping command](https://github.com/saeed402/int-2023/assets/139351697/c80c6d5a-fbd0-4772-8e28-93bf4d31914e)
+
 
 **35. host command**
 
@@ -415,7 +434,8 @@ command | sed 's/<oldWord>/<newWord>/'
  uname -a
 ````
 
-![uname and whoami command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\uname and whoami command.PNG)
+![uname and whoami command](https://github.com/saeed402/int-2023/assets/139351697/0f26d911-d94a-4e1a-b81b-f53cee3f5c31)
+
 
 **38. ssh command**
 
@@ -518,7 +538,8 @@ New password:
  -->> chmod root:root loop.sh
 ````
 
-![chmod command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\chmod command.PNG)
+![chmod command](https://github.com/saeed402/int-2023/assets/139351697/d60ed4af-c9f5-410c-8988-562bb6f0437b)
+
 
 **48. wget command**
 
