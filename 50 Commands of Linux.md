@@ -10,7 +10,8 @@
 ls [options] [file… | directory …]
 ````
 
-![touch ls -al command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\touch ls -al command.PNG)
+![touch ls -al command](https://github.com/saeed402/int-2023/assets/139351697/01d37f68-89b9-4cdd-ac65-86ab92e57b2e)
+
 
 **2. pwd command**
 
