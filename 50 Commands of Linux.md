@@ -10,7 +10,7 @@
 ls [options] [file… | directory …]
 ````
 
-
+![touch ls -al command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\touch ls -al command.PNG)
 
 **2. pwd command**
 
@@ -21,6 +21,8 @@ pwd
 
 ````
 
+![Pwd command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\Pwd command.PNG)
+
 **3. mkdir Command**
 
 *The mkdir command is used to create a new directory under any directory.*
@@ -28,6 +30,8 @@ pwd
 ````syntax
 mkdir <directory name> 
 ````
+
+![mkdir command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\mkdir command.PNG)
 
 **4. rmdir command**
 
@@ -37,22 +41,32 @@ mkdir <directory name>
 rmdir <directory name>
 ````
 
+![rmdir 1](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\rmdir 1.PNG)
+
+*The rmdir command **removes the directory, specified by the Directory parameter, from the system**. The directory must be empty before you can remove it, and you must have write permission in its parent directory.*
+
+![rmdir 2](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\rmdir 2.PNG)
+
 **5. cd command**
 
-*The cd command is used to change the current directory.*
+*The cd command is used to change the current directory. It is used **to move efficiently from the current working directory to different directories in our System**.*
 
 ````syntax
 cd <directory name>  
 ````
 
+![cd command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cd command.PNG)
+
 **6. touch command**
 
-*The touch command is used to create empty files. We can create multiple empty files by executing it once.*
+*The touch command is used to create empty files. We can create multiple empty files by executing it once.  And modify the file timestamps (file access time, last date, or modification).*
 
 ````syntax
 touch <file name>  
 touch <file1>  <file2> ....  
 ````
+
+![touch ls -al command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\touch ls -al command.PNG)
 
 **7. cat command**
 
@@ -69,6 +83,8 @@ cat > <file name>
 // Enter file content  
 ````
 
+![cat command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cat command.PNG)
+
 **8. rm command**
 
 *The rm command is used to remove a file.*
@@ -76,6 +92,8 @@ cat > <file name>
 ````syntax
 rm <file name>
 ````
+
+![rmdir 2](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\rmdir 2.PNG)
 
 **9. cp command**
 
@@ -85,6 +103,10 @@ rm <file name>
 cp <existing file name> <new file name> 
 ````
 
+![cp 1](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cp 1.PNG)
+
+![cp 2](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cp 2.PNG)
+
 **10. mv command**
 
 *The mv command is used to move a file or a directory form one location to another location.*
@@ -93,6 +115,8 @@ cp <existing file name> <new file name>
 mv <file name> <directory path> 
 ````
 
+![mv](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\mv.PNG)
+
 **11. head command**
 
 *The head command is used to display the content of a file. It displays the first 10 lines of a file.*
@@ -100,6 +124,8 @@ mv <file name> <directory path>
 ````syntax
 head <file name>  
 ````
+
+![head command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\head command.PNG)
 
 **12. tail command**
 
@@ -114,6 +140,8 @@ tail <file name>
 
 ````
 
+![tail command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\tail command.PNG)
+
 **13. tac command**
 
 *The tac command is the reverse of cat command, as its name specified.*
@@ -123,6 +151,8 @@ tail <file name>
 ````syntax
 tac <file name>  
 ````
+
+![tac command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\tac command.PNG)
 
 **13. su command**
 
@@ -134,6 +164,8 @@ tac <file name>
 su <user name>  
 ````
 
+![su 1](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\su 1.PNG)
+
 **14. cat command**
 
 *The cat command is also used as a filter. To filter a file, it is used inside pipes.*
@@ -142,6 +174,8 @@ su <user name>
 cat <fileName> | cat or tac | cat or tac |. . . 
 ````
 
+![cat filter](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cat filter.PNG)
+
 **15. tr command**
 
 *The tr command is used to translate the file content like from lower case to upper case.*
@@ -149,6 +183,8 @@ cat <fileName> | cat or tac | cat or tac |. . .
 ````syntax
 command | tr <'old'> <'new'>  
 ````
+
+
 
 **16. uniq command**
 
@@ -222,6 +258,8 @@ gunzip <file1> <file2> <file3>. .
 find . -name "*.pdf"  
 ````
 
+![find command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\find command.PNG)
+
 **23. locate command **
 
 *The locate command is used to search a file by file name.* 
@@ -236,6 +274,8 @@ find . -name "*.pdf"
 locate <file name>  
 `````
 
+![locate command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\locate command.PNG)
+
 **24. date command**
 
 *The date command is used to display date, time, time zone, and more.*
@@ -244,6 +284,8 @@ locate <file name>
 date 
 ````
 
+![Date command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\Date command.PNG)
+
 **25. cal command**
 
 *The cal command is used to display the current month's calendar with the current date highlighted.*
@@ -251,6 +293,8 @@ date
 ````syntax
 cal<
 ````
+
+![cal command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\cal command.PNG)
 
 **26. sleep command**
 
@@ -278,6 +322,8 @@ zcat <file name>
 df
 ````
 
+![df command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\df command.PNG)
+
 **29. mount command**
 
 *The mount command is used to connect an external device file system to the system's file system.*
@@ -304,6 +350,8 @@ exit
 clear 
 ````
 
+![clear command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\clear command.PNG)
+
 **32. ip command**
 
 *Linux ip command is an updated version of the ipconfig command.*
@@ -313,6 +361,8 @@ clear
 ````syntax
 ip a or ip addr  
 ````
+
+![ip command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\ip command.PNG)
 
 **33. mail commmand **
 
@@ -331,6 +381,8 @@ mail -s "Subject" <recipient address>
 ````syntax
 ping <destination>  
 ````
+
+![image-20230725221357550](C:\Users\MY HP\AppData\Roaming\Typora\typora-user-images\image-20230725221357550.png)
 
 **35. host command**
 
@@ -361,6 +413,8 @@ command | sed 's/<oldWord>/<newWord>/'
 ````syntax
  uname -a
 ````
+
+![uname and whoami command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\uname and whoami command.PNG)
 
 **38. ssh command**
 
@@ -462,6 +516,8 @@ New password:
  -->> chmod +x loop.sh
  -->> chmod root:root loop.sh
 ````
+
+![chmod command](C:\Users\MY HP\Pictures\Saved Pictures\Task(3)\chmod command.PNG)
 
 **48. wget command**
 
