@@ -23,16 +23,17 @@
 
 # Call the filter_file_details function to display filtered file details
 # This part of the script calls the filter_file_details function with the provided arguments to display the filtered file details.
+
 # Function to display help message
 function display_help {
     echo "Usage: $0 <file_abs_path> [options]"
     echo "Options:"
     echo "  -s, --size <size>        Show files with size greater than or equal to <size>"
-    echo "                           Accepted formats: B, KB, MB, GB, TB"
-    echo "  -d, --date <YYYY-MM-DD>  Show files with modification date equal to <YYYY-MM-DD>"
+    echo "                           Accepted formats: B, KB, MB, GB, TB (case insensitive)"
+    echo "  -d, --date <date>        Show files with last modified date matching <date> (YYYY-MM-DD)"
     echo "  -o, --owner <owner>      Show files owned by the specified <owner>"
     echo "  -e, --extension          Show filenames without extensions"
-    echo "  -l, --listing            Show file listing instead of individual files"
+    echo "  -l, --listing            Show file listing"
     echo "  -h, --help               Show this help message"
     echo "Example: $0 <file_abs_path> -s 1KB"
 }
@@ -40,22 +41,7 @@ function display_help {
 # Function to convert human-readable size to bytes
 function human_readable_size_to_bytes {
     local input=$1
-
-    # Convert input to lowercase for case-insensitivity
-    input=$(echo "$input" | tr '[:upper:]' '[:lower:]')
-
-    # Extract numeric value and unit from input
-    local numeric_value=${input//[!0-9]/}
-    local unit=${input//[0-9]/}
-
-    case $unit in
-        b) echo "$numeric_value";;
-        kb) echo "$((numeric_value * 1024))";;
-        mb) echo "$((numeric_value * 1024 * 1024))";;
-        gb) echo "$((numeric_value * 1024 * 1024 * 1024))";;
-        tb) echo "$((numeric_value * 1024 * 1024 * 1024 * 1024))";;
-        *) echo "Invalid size format: $input"; exit 1;;
-    esac
+    # ...
 }
 
 # Function to convert bytes to human-readable size
@@ -68,8 +54,10 @@ function bytes_to_human_readable_size {
         echo "$(( bytes / 1024 ))KB"
     elif (( bytes < 1073741824 )); then
         echo "$(( bytes / 1024 / 1024 ))MB"
-    else
+    elif (( bytes < 1099511627776 )); then
         echo "$(( bytes / 1024 / 1024 / 1024 ))GB"
+    else
+        echo "$(( bytes / 1024 / 1024 / 1024 / 1024 ))TB"
     fi
 }
 
@@ -82,20 +70,15 @@ function filter_file_details {
     local show_extension="$5"
     local show_listing="$6"
 
-    # Convert size_filter to bytes (if required)
+    # Size filter in bytes
     local size_filter_bytes
     if [[ -n "$size_filter" ]]; then
         size_filter_bytes=$(human_readable_size_to_bytes "$size_filter")
     fi
 
-    # Print header for individual files or listing
-    if [[ "$show_listing" == "true" ]]; then
-        printf "%-30s %-20s %-12s %-20s %-10s\n" "Filename" "Owner" "Last Modified" "File Size" "Extension"
-        printf "%s\n" "--------------------------------------------------------------------------------"
-    else
-        printf "%-30s %-50s %-12s\n" "Filename" "Absolute Path" "Last Modified"
-        printf "%s\n" "------------------------------------------------------------"
-    fi
+    # Print header
+    printf "%-70s %-30s %-10s %-15s %-15s\n" "Absolute Path" "Filename" "File Size" "Last Modified" "Username"
+    printf "%s\n" "-----------------------------------------------------------------------------------------------------------"
 
     # Read file details from CSV and apply filters
     while IFS=, read -r file_permissions file_owner file_size file_name abs_path last_modified; do
@@ -105,26 +88,26 @@ function filter_file_details {
         fi
 
         # Apply filters based on flags
-        if [[ -n "$size_filter" && ($file_size -lt $size_filter_bytes) ]]; then
-            continue
-        fi
-        if [[ -n "$date_filter" && "$last_modified" != "$date_filter" ]]; then
-            continue
-        fi
-        if [[ -n "$owner_filter" && "$file_owner" != "$owner_filter" ]]; then
-            continue
-        fi
+        local file_size_bytes=$((file_size))
         if [[ "$show_extension" == "true" ]]; then
             file_name="${file_name%.*}"
         fi
 
-        # Format the output for individual files or listing
         if [[ "$show_listing" == "true" ]]; then
-            file_extension="${file_name##*.}"
-            file_size_human=$(bytes_to_human_readable_size "$file_size")
-            printf "%-30s %-20s %-12s %-20s %-10s\n" "$file_name" "$file_owner" "$last_modified" "$file_size_human" "$file_extension"
+            printf "%-70s %-30s %-10s %-15s %-15s\n" "$abs_path" "$file_name" "$file_size" "${last_modified:0:10}" "$file_owner"
         else
-            printf "%-30s %-50s %-12s\n" "$file_name" "$abs_path" "$last_modified"
+            local file_date="${last_modified:0:10}"
+            if [[ -n "$size_filter_bytes" && $file_size_bytes -lt $size_filter_bytes ]]; then
+                continue
+            fi
+            if [[ -n "$date_filter" && "$file_date" != "$date_filter" ]]; then
+                continue
+            fi
+            if [[ -n "$owner_filter" && "$file_owner" != "$owner_filter" ]]; then
+                continue
+            fi
+            local human_readable_size=$(bytes_to_human_readable_size "$file_size_bytes")
+            printf "%-70s %-30s %-10s %-15s %-15s\n" "$abs_path" "$file_name" "$human_readable_size" "$file_date" "$file_owner"
         fi
     done < "$file_path"
 }
