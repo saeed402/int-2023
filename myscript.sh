@@ -112,6 +112,26 @@ function filter_file_details {
     done < "$file_path"
 }
 
+# Function to save the filtered results to a file
+function save_results {
+    local file_path="$1"
+    local output_file="filtered_results_$(date +%Y%m%d%H%M%S).csv"
+    local unique_id=1
+
+    if [[ -f "$output_file" ]]; then
+        # Find a unique ID for the output file
+        while [[ -f "${output_file}_${unique_id}.csv" ]]; do
+            ((unique_id++))
+        done
+        output_file="${output_file}_${unique_id}.csv"
+    fi
+
+    # Save the results to the output file
+    cp "$file_path" "$output_file"
+
+    echo "Filtered results have been saved to: $output_file"
+}
+
 # Check if the file path is provided as an argument
 if [[ $# -eq 0 ]]; then
     display_help
@@ -167,4 +187,30 @@ if [[ ! -f "$file_path" ]]; then
 fi
 
 # Call the filter_file_details function to display filtered file details
-filter_file_details "$file_path" "$size_filter" "$date_filter" "$owner_filter" "$show_extension" "$show_listing"
+filtered_output=$(filter_file_details "$file_path" "$size_filter" "$date_filter" "$owner_filter" "$show_extension" "$show_listing")
+
+# Display the filtered results
+echo "Filtered Results:"
+echo "$filtered_output"
+
+# Prompt the user to save the results
+tries=0
+while true; do
+    read -p "Do you want to save the filtered results? (Y/N): " save_choice
+
+    if [[ "$save_choice" =~ ^[Yy]$ ]]; then
+        save_results "$file_path"
+        break
+    elif [[ "$save_choice" =~ ^[Nn]$ ]]; then
+        echo "Filtered results will not be saved."
+        break
+    else
+        ((tries++))
+        if ((tries >= 3)); then
+            echo "Invalid input. Exiting without saving."
+            break
+        else
+            echo "Invalid input. Please enter Y or N."
+        fi
+    fi
+done
