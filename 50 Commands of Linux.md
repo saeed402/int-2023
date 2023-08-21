@@ -55,6 +55,16 @@ pwd
 
 *The mkdir command is used to create a new directory under any directory.*
 
+*Following are the options used with touch command:*
+
+    -a, change the access time only
+    -c, if the file does not exist, do not create it
+    -d, update the access and modification times
+    -m, change the modification time only
+    -r, use the access and modification times of the file
+    -t, creates a file using a specified time
+
+
 ````syntax
 mkdir <directory name> 
 ````
@@ -65,6 +75,14 @@ mkdir <directory name>
 **4. rmdir command**
 
 *The rmdir command is used to delete a directory.*
+
+*Following are the options ised with rmdir command:*
+
+    -p: This option removes the DIRECTORY and any empty parent directories.
+    -v: This option displays a message for each removed directory.
+    --ignore-fail-on-non-empty: This option suppresses error messages if a directory is not empty.
+    --help: This option displays the help message for the rmdir command.
+
 
 ````syntax
 rmdir <directory name>
@@ -131,7 +149,20 @@ rm <file name>
 
 **9. cp command**
 
-*The cp command is used to copy a file or directory.*
+*The cp command is used to copy a file or directory.Copies a file. Use the cp command to create a copy of the contents of the file or directory specified by the SourceFile or SourceDirectory parameters into the file or directory specified by the TargetFile or TargetDirectory parameters.*
+
+*Following are the options used with cp command:*
+
+    cp -a: This option is used to archive the existing files in the directory for retention purpose.
+    cp -f: This option forcefully copy the files even it may remove the target file if needed. It is applicable if the file is already in use.
+    cp -i: This option stands for interactive mode, which means that it will ask the user to overwrite the file by prompt.
+    cp -l: This option is used to link a file with another existing one instead of copying it.
+    cp -L: It is will create a symbolic link for the file.
+    cp -n: This option is used not to overwrite any existing file.
+    cp -R: This option means recursive copy means that it will copy all files with a cascading directory, including hidden file.
+    cp -u: This means update, copy when the source file is new than the destination file.
+    cp -v: This option stands for verbose which means that will it print all the process which happens on a file while copying.
+
 
 ````syntax
 cp <existing file name> <new file name> 
@@ -143,7 +174,12 @@ cp <existing file name> <new file name>
 
 **10. mv command**
 
-*The mv command is used to move a file or a directory form one location to another location.*
+*The mv command is used to move a file or a directory form one location to another location.Renames a file. We can use the mv command to move files and directories from one directory to another or to rename a file or directory. If you move a file or directory to a new directory without specifying a new name, it retains its original name.*
+
+*Following are the options used with mv command:*
+
+    -i Interactive mode. Ask before overwriting destination files.
+    -f Force the move. If a destination file exists, overwrite it unconditionally
 
 ````syntax
 mv <file name> <directory path> 
@@ -155,6 +191,15 @@ mv <file name> <directory path>
 **11. head command**
 
 *The head command is used to display the content of a file. It displays the first 10 lines of a file.*
+
+*Following are the options used with head command:*
+
+    -n --lines : show the specified number of lines
+    -c --bytes : show the specified number of bytes
+    -v --verbose : show the file name tag
+    -q --quiet : don't separate the content of multiple files with a file name tag
+
+head picture
 
 ````syntax
 head <file name>  
@@ -170,6 +215,16 @@ head <file name>
 *The difference between both commands is that it displays the last ten lines of the file content.*
 
 *It is useful for reading the error message.*
+
+*Following are the options used with tail command:*
+
+    -n / --lines : Limit output to the last n lines/limit output to the lines following from line n
+    -c / --bytes : Limit output to the last n bytes/limit output to the bytes following from byte n
+    -q / --quiet, --silent : When using multiple files, suppress the output of the file names
+    -v / --verbose : Force output of file names when used with multiple files
+    --help : View Help section for command
+    --version : View version information of command
+
 
 ````syntax
 tail <file name>  
