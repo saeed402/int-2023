@@ -10,19 +10,19 @@
  Following are the flags used with ls command:
 
     - ls -a	list all files including hidden file starting with '.'.
-    ls -d	*list directories - with ' /'.
-    ls -l	list with long format - show permissions.
-    ls -F	*Append indicator (one of /=>@|) to entries.
-    ls -lh	This command will show you the file sizes in human readable format.
-    ls -r	list in reverse order.
-    ls -i	list file's inode(index) number.
-    ls -ltr	View Reverse Output Order by Date.
-    ls -t	sort by time & date.
-    ls -n	It is used to print group ID and owner ID instead of their names.
-    ls -m	A list of entries separated by commas should fill the width.
-    ls -g	This allows you to exclude the owner and group information columns.
-    ls -q	Force printing of non-graphic characters in file names as the character `?';.
-    ls -Q	Place double quotations around the entry names.
+    -ls -d	*list directories - with ' /'.
+    -ls -l	list with long format - show permissions.
+    -ls -F	*Append indicator (one of /=>@|) to entries.
+    -ls -lh	This command will show you the file sizes in human readable format.
+    -ls -r	list in reverse order.
+    -ls -i	list file's inode(index) number.
+    -ls -ltr	View Reverse Output Order by Date.
+    -ls -t	sort by time & date.
+    -ls -n	It is used to print group ID and owner ID instead of their names.
+    -ls -m	A list of entries separated by commas should fill the width.
+    -ls -g	This allows you to exclude the owner and group information columns.
+    -ls -q	Force printing of non-graphic characters in file names as the character `?';.
+    -ls -Q	Place double quotations around the entry names.
 
 
 ````syntax
