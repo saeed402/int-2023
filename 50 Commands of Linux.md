@@ -9,7 +9,7 @@
  *It can be used for a single file or as many as all files and folders in a selected set of directories.*
  Following are the flags used with ls command:
 
-    ls -a	list all files including hidden file starting with '.'.
+    - ls -a	list all files including hidden file starting with '.'.
     ls -d	*list directories - with ' /'.
     ls -l	list with long format - show permissions.
     ls -F	*Append indicator (one of /=>@|) to entries.
