@@ -909,19 +909,33 @@ dd if = /dev/sdb of = /dev/sda
 
 *The scp (Secure Copy) command is a Linux utility used to securely transfer files and directories between hosts. It operates over SSH, providing encryption and authentication for secure file transfers. Below are the details of how the scp command works, along with some key options:*
 
-scp [options] source destination
+- `source`: The file or directory you want to copy.
+- `destination`: The target location where you want to copy the source.
 
-*destination: The target location where you want to copy the source. This can be a local path or in the format user@host:path for remote copying.*
+### Common Use Cases
 
-[Options]
+- *Copy Local File to Remote Server:*
 
-`-r `or --recursive: Enables recursive copying for directories and their contents.
-`-P `<port>: Specifies the SSH port to use on the remote host (default is 22).
-`-i` <identity_file>: Specifies the private key file for authentication.
-`-v:` Enables verbose mode, providing more detailed output during the transfer.
-`-p:` Preserves the modification times, access times, and modes from the original file.
-`-q:` Suppresses non-error messages.
-`-C:` Enables compression during the transfer to reduce bandwidth usage.
+  ```bash
+  scp localfile.txt user@remotehost:/path/on/remote/server/
+
+  ### Additional Options
+
+The `scp` command provides various additional options to customize the behavior of file transfers:
+
+- `-i <identity_file>`: Specifies the private key file for authentication. This option allows you to use a specific SSH key for authentication.
+
+- `-P <port>`: Specifies the SSH port to use on the remote host. By default, SSH uses port 22, but you can use this option to specify a different port if needed.
+
+- `-v`: Enables verbose mode, providing detailed output during the transfer. Verbose mode displays progress and additional information about the transfer.
+
+- `-p`: Preserves modification times, access times, and modes from the original file. When this option is used, the copied file on the destination will have the same attributes as the original file.
+
+- `-q`: Suppresses non-error messages. Only error messages will be displayed, making the output less verbose.
+
+- `-C`: Enables compression during the transfer to reduce bandwidth usage. This option compresses the data being transferred, which can be beneficial when transferring large files over a network.
+
+These additional options enhance the flexibility and control of the `scp` command, allowing you to tailor your file transfers to specific requirements.
 
 **52.SSH command**
 
