@@ -904,15 +904,13 @@ wget -c <link to file>
 ````syntax
 dd if = /dev/sdb of = /dev/sda
 ````
-**scp Command**
+
+**51.scp Command**
 
 *The scp (Secure Copy) command is a Linux utility used to securely transfer files and directories between hosts. It operates over SSH, providing encryption and authentication for secure file transfers. Below are the details of how the scp command works, along with some key options:*
 
-Basic Syntax
-bash
-Copy code
 scp [options] source destination
-source: The source file or directory you want to copy.
+
 destination: The target location where you want to copy the source. This can be a local path or in the format user@host:path for remote copying.
 Options
 -r or --recursive: Enables recursive copying for directories and their contents.
@@ -922,31 +920,7 @@ Options
 -p: Preserves the modification times, access times, and modes from the original file.
 -q: Suppresses non-error messages.
 -C: Enables compression during the transfer to reduce bandwidth usage.
-Examples
+
+*Examples*
 Copy a local file to a remote server:
-
-bash
-Copy code
-scp localfile.txt user@remotehost:/path/on/remote/server/
-Copy a remote file to the local machine:
-
-bash
-Copy code
-scp user@remotehost:/path/on/remote/server/remotefile.txt /local/path/
-Copy a directory and its contents from a remote server to the local machine:
-
-bash
-Copy code
-scp -r user@remotehost:/path/on/remote/server/directory /local/path/
-Copy a local file to a remote server using a specific SSH key:
-
-bash
-Copy code
-scp -i /path/to/private_key localfile.txt user@remotehost:/path/on/remote/server/
-Copy a remote file to the local machine using a specific SSH port:
-
-bash
-Copy code
-scp -P 2222 user@remotehost:/path/on/remote/server/remotefile.txt /local/path/
-scp provides a secure and efficient way to transfer files between hosts while maintaining encryption and security. For large-scale data transfers, other tools like rsync might be more suitable.
 
