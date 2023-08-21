@@ -911,16 +911,13 @@ dd if = /dev/sdb of = /dev/sda
 
 scp [options] source destination
 
-destination: The target location where you want to copy the source. This can be a local path or in the format user@host:path for remote copying.
+*destination: The target location where you want to copy the source. This can be a local path or in the format user@host:path for remote copying.*
 Options
--r or --recursive: Enables recursive copying for directories and their contents.
--P <port>: Specifies the SSH port to use on the remote host (default is 22).
--i <identity_file>: Specifies the private key file for authentication.
--v: Enables verbose mode, providing more detailed output during the transfer.
--p: Preserves the modification times, access times, and modes from the original file.
--q: Suppresses non-error messages.
--C: Enables compression during the transfer to reduce bandwidth usage.
-
-*Examples*
-Copy a local file to a remote server:
+`-r `or --recursive: Enables recursive copying for directories and their contents.
+`-P `<port>: Specifies the SSH port to use on the remote host (default is 22).
+`-i` <identity_file>: Specifies the private key file for authentication.
+`-v:` Enables verbose mode, providing more detailed output during the transfer.
+`-p:` Preserves the modification times, access times, and modes from the original file.
+`-q:` Suppresses non-error messages.
+`-C:` Enables compression during the transfer to reduce bandwidth usage.
 
