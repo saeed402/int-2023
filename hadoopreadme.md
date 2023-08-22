@@ -132,102 +132,20 @@ Key features and characteristics of Apache Spark include:
 Apache Spark has gained widespread adoption in various industries and domains, including finance, healthcare, e-commerce, and more. Its versatility, performance improvements, and ease of use have made it a preferred choice for big data processing and analytics, replacing or complementing traditional MapReduce-based workflows in many cases.
 
 **Comparison between MapReduce / Apache Tez / Apache Spark**
+| Feature                   | MapReduce                        | Apache Tez                       | Apache Spark                    |
+|---------------------------|----------------------------------|----------------------------------|---------------------------------|
+| Processing Model          | Batch processing                 | DAG-based processing            | Unified, batch, streaming, ML, graph processing |
+| Data Movement            | Disk-based, slow                 | Optimized data movement         | In-memory, fast                 |
+| DAG Execution             | No                               | Yes                              | Yes                             |
+| Ease of Use               | Low (Complex programming)        | Medium (Abstraction over YARN)   | High (User-friendly APIs)       |
+| In-Memory Processing      | Limited                          | Yes                              | Yes                             |
+| Fault Tolerance           | Through recomputation            | Through re-execution            | Through lineage information (RDDs) |
+| Resource Management       | YARN                             | YARN                             | YARN                            |
+| Flexibility               | Limited                          | Supports custom data processing | Versatile (Batch, Streaming, ML, Graph) |
+| Real-Time Processing      | No                               | Limited (Some real-time)         | Yes (Spark Streaming)           |
+| Libraries & Ecosystem     | Limited ecosystem                | Growing ecosystem                | Rich ecosystem                  |
+| Use Cases                 | Batch processing                 | Complex workflows               | Variety of use cases            |
 
-**Feature**
-
-**MapReduce**
-
-**Apache Tez**
-
-**Apache Spark**
-
-Processing Model
-
-Batch processing
-
-DAG-based processing
-
-Unified, batch, streaming, ML, graph processing
-
-Data Movement
-
-Disk-based, slow
-
-Optimized data movement
-
-In-memory, fast
-
-DAG Execution
-
-No
-
-Yes
-
-Yes
-
-Ease of Use
-
-Low (Complex programming)
-
-Medium (Abstraction over YARN)
-
-High (User-friendly APIs)
-
-In-Memory Processing
-
-Limited
-
-Yes
-
-Yes
-
-Fault Tolerance
-
-Through recomputation
-
-Through re-execution
-
-Through lineage information (RDDs)
-
-Resource Management
-
-YARN
-
-YARN
-
-YARN
-
-Flexibility
-
-Limited
-
-Supports custom data processing
-
-Versatile (Batch, Streaming, ML, Graph)
-
-Real-Time Processing
-
-No
-
-Limited (Some real-time)
-
-Yes (Spark Streaming)
-
-Libraries & Ecosystem
-
-Limited ecosystem
-
-Growing ecosystem
-
-Rich ecosystem
-
-Use Cases
-
-Batch processing
-
-Complex workflows
-
-Variety of use cases
 
   **What is PIG in Hadoop context?**
 
