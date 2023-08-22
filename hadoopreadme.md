@@ -220,4 +220,3 @@ Key features and characteristics of Spark MLlib include:
 8.  **Integration with DataFrame API:** MLlib is designed to work seamlessly with Spark DataFrames, allowing you to leverage Spark's optimized and expressive data manipulation capabilities along with machine learning tasks.
 9.  **Scalability:** MLlib's distributed nature ensures that it can handle large datasets that may not fit in memory on a single machine.
 
-Top of Form
